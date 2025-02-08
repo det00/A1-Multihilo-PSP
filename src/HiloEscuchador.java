@@ -22,7 +22,7 @@ public class HiloEscuchador implements Runnable {
             ObjectInputStream entrada = new ObjectInputStream(enchufeAlCliente.getInputStream());
             ObjectOutputStream salida = new ObjectOutputStream(enchufeAlCliente.getOutputStream());
 
-            while (true) {  // Bucle para múltiples consultas
+            while (true) {
                 try {
                     String nombreEmpleado = (String) entrada.readObject();
                     if ("FIN".equals(nombreEmpleado)) { // Termina la conexión si el cliente envía "FIN"
@@ -31,7 +31,7 @@ public class HiloEscuchador implements Runnable {
                     }
                     System.out.println(hilo.getName() + " solicita información de: " + nombreEmpleado);
 
-                    // Buscamos el empleado en la lista
+
                     Empleado empleadoEncontrado = null;
                     for (Empleado emp : ServidorM.getEmpleados()) {  // Asegúrate de que este método está bien escrito
                         if (emp.getNombre().equalsIgnoreCase(nombreEmpleado)) {
@@ -49,7 +49,7 @@ public class HiloEscuchador implements Runnable {
                     }
                 } catch (ClassNotFoundException e) {
                     System.out.println("Error al deserializar objeto: " + e.getMessage());
-                    break; // Sale del bucle en caso de error de deserialización
+                    break;
                 }
             }
 

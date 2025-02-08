@@ -23,42 +23,6 @@ public class Empleado implements Serializable {
                 ']';
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getMatricula() {
-        return matricula;
-    }
-
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public String getApellidos() {
-        return apellidos;
-    }
-
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
-    }
-
-    public Puesto getPuesto() {
-        return puesto;
-    }
-
-    public void setPuesto(Puesto puesto) {
-        this.puesto = puesto;
-    }
-
     public Empleado(String nombre, String matricula, int edad, String apellidos, Puesto puesto) {
         this.nombre = nombre;
         this.matricula = matricula;

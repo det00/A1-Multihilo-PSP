@@ -22,8 +22,6 @@ public class ServidorM {
         empleados.add(new Empleado("Elena", "MAT010", 31, "García", new Puesto("Abogada", "Asesoría legal")));
     }
 
-
-    // Método para obtener la lista de empleados, encapsulando el acceso a la variable estática
     public static List<Empleado> getEmpleados() {
         return empleados;
     }

@@ -9,24 +9,9 @@ public class Puesto implements Serializable {
         this.descripcionPuesto = descripcionPuesto;
     }
 
-    public String getNombrePuesto() {
-        return nombrePuesto;
-    }
-
     @Override
     public String toString() {
         return "Puesto: [Nombre del puesto: "+ nombrePuesto + ", Descripción: " + descripcionPuesto + "]";
     }
 
-    public void setNombrePuesto(String nombrePuesto) {
-        this.nombrePuesto = nombrePuesto;
-    }
-
-    public String getDescripcionPuesto() {
-        return descripcionPuesto;
-    }
-
-    public void setDescripcionPuesto(String descripcionPuesto) {
-        this.descripcionPuesto = descripcionPuesto;
-    }
 }
